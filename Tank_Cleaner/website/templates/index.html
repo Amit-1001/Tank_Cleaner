@@ -1,0 +1,297 @@
+ {% extends 'base.html' %} {% load static %} {% block content %}
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+            <!-- Slide  -->
+            <div class="carousel-item active">
+                <img src="{% static 'website/assets/img/slide/slide1.jpg' %}">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown ">Welcome to <span>Ashatavinayak</span></h2>
+                        <h4 style="color: white;"><b>"We Make Your Tank Shine and Clean!"</b></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- End Hero -->
+
+<main id="main">
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <img src="{% static 'website/assets/img/about1.jpg' %}" class="img-fluid" alt="" style="height: 90%;">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+
+                    <ul style="margin: 20dp;">
+                        <h3>Who we are ??</h3>
+                        <li style="margin-right: 3%;">
+                            <i class="icofont-check-circled"></i>
+
+                            <p>Ashatavinayak Tank cleaner providing tank cleaning service <b>since 2012.</b></p>
+                        </li>
+                        <li>
+                            <i class="icofont-check-circled "></i>
+                            <p>Ashatavinayak Tank cleaner is one of the <b>"Best tank cleaning service provider"</b> in aurangabad when it comes to residential and corporate cleaning services.</p>
+                        </li>
+
+
+                        <h3>
+                            Why choose us ??
+                        </h3>
+                        <li><i class="icofont-check-circled "></i>
+                            <p><b>Ashatavinayak vision</b> is to keep our nation to the level where people can recognize India as a <b>“Swachh Bharat”</b> And, Ashatavinayak Tank cleaner have started their mission from aurangabad.</p>
+                        </li>
+                        <li><i class="icofont-check-circled "></i>
+                            <p>Ashatavinayak assured cutomer <b>saftey</b> and provide service at <b>reasonable price rate.</b></p>
+                        </li>
+                        <li><i class="icofont-check-circled "></i>
+                            <p>Ashatavinayak Tank cleaner serving their customer with Their 100% and providing punctual service to their customer.</p>
+                        </li>
+
+                        <h3>Our Clients</h3>
+                        <li><i class="icofont-check-circled "></i>
+                            <p>Schools, Colleges, universities, institutions, Banks, Government Offices, Industrial area, Hospitals, Hotels etc.</p>
+                        </li>
+                        <li><i class="icofont-check-circled "></i>
+                            <p>Well known clients are Bajaj Hospital, MGM Hospital, MIT Hospital etc.</p>
+                        </li>
+
+                    </ul>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End About Us Section -->
+
+
+
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-9 text-center text-lg-left">
+                    <h3>GET A BOOKING !</h3>
+                    <p>We use natural and eco-friendly cleaning
+                        <br> products and have a customer satisfaction guarantee 😃.</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="{%url 'booking'%}">GET A BOOKING !</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Gallery</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row portfolio-container">
+                {% for portfolio in portfolios %}
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="{{ portfolio.img.url}}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+
+                            <div class="portfolio-links">
+                                <a href=" #" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!--
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src=" {% static 'website/assets/img/portfolio/portfolio2.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+
+                            <div class="portfolio-links">
+                                <a href=" {% static 'website/assets/img/portfolio/portfolio2.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'website/assets/img/portfolio/portfolio3.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+
+                            <div class="portfolio-links">
+                                <a href="{% static 'website/assets/img/portfolio/portfolio3.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'website/assets/img/portfolio/portfolio4.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+
+                            <div class="portfolio-links">
+                                <a href="{% static 'website/assets/img/portfolio/portfolio4.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'website/assets/img/portfolio/portfolio5.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+
+                            <div class="portfolio-links">
+                                <a href="{% static 'website/assets/img/portfolio/portfolio5.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="{% static 'website/assets/img/portfolio/portfolio6.jpg' %}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+
+                            <div class="portfolio-links">
+                                <a href="{% static 'website/assets/img/portfolio/portfolio6.jpg' %}" data-gall="portfolioGallery" class="venobox"><i class="bx bx-plus"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>{{meassage}}</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
+                        <div class="address">
+                            <i class="icofont-google-map"></i>
+                            <h4>Location:</h4>
+                            <p> Tirupati Supreem Encleve , shop no-06, Jalan Nagar, Aurangabad, Maharashtra 431136</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="icofont-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>thoratanil2008@gmail.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="icofont-phone"></i>
+                            <h4>Call:</h4>
+                            <p>9921369878</p>
+                        </div>
+                        <div class="map-responsive">
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.5568238230117!2d75.3022931148637!3d19.85869618664381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9857c09be0cd%3A0x5006e69742fbf3c3!2sAshatavinayak%20Tank%20Cleaners!5e0!3m2!1sen!2sin!4v1609757501534!5m2!1sen!2sin"
+                                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <form action="{%url 'index'%}" method="post" role="form" class="info">
+                        {%csrf_token%}
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name" class="form-control" id="name" data-msg="Please enter at least 4 chars" required>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Email</label>
+                                <input type="email" class="form-control" name="email" id="email" data-msg="Please enter a valid email" placeholder="abc@gmail.com" required>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" data-msg="Please enter at least 8 chars of subject" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Message</label>
+                            <textarea class="form-control" name="message" rows="10" data-msg="Please write something for us" required></textarea>
+
+                        </div>
+                        <div class="text-center"><button type="submit" class="btn btn-success">Send Message</button></div>
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+</main>
+<!-- End #main -->
+
+{% endblock %}

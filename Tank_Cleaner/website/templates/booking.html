@@ -1,0 +1,229 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+{% static 'website/' %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ashatavinayak Tank Cleaner</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+
+    <link href="{% static 'website/assets/img/favicon.png'%}" rel="icon">
+    <link href="{% static 'website/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->{% static 'website/' %}
+    <link href="{% static 'website/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+
+    <!--sticky media-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--Date picker-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/style3.css'%}">
+
+
+</head>
+
+<body>
+
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div class="container d-flex">
+            <div class="contact-info mr-auto">
+                <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">thoratanil2008@gmail.com</a>
+                <i class="icofont-phone"></i>9921369878
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo mr-auto"><a href="/">Ashatavinayak</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Gallery</a></li>
+                    <li><a href="/">Contact</a></li>
+
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+
+
+            <a href="/" class="get-started-btn scrollto">GET A BOOKING !!</a>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide  -->
+                <div class="carousel-item active">
+                    <img src="{% static 'website/assets/img/slide/slide1.jpg' %}">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Get your Booking !</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Slide  -->
+
+    <!--Booking-->
+    <div class="content">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
+                    <div class="tour-booking-form">
+                        <form action="{%url 'booking'%}" method="post" role="form" class="booking">
+                            {%csrf_token%}
+                            <div class="row ">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt30">
+                                    <h4 class="tour-form-title text-center" style="margin-top: 2%;"><span><bold>{{message}}</bold></span></h4>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  " style=" margin-top: 2%; ">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Name</label>
+                                        <input id="name" type="text" placeholder="First Name" class="form-control" name="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 " style=" margin-top: 2%; ">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email"> Email</label>
+                                        <input type="email" class="form-control" name="email" id="email" data-msg="Please enter a valid email" placeholder="abc@gmail.com" required>
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="phone"> Phone</label>
+                                        <input id="phone" type="text" placeholder="+91xxxxxxx" class="form-control" name="phone" required>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="datepicker">Date</label>
+
+                                        <input id="datepicker" width="276" name="date" required/>
+                                        <script>
+                                            $('#datepicker').datepicker({
+                                                uiLibrary: 'bootstrap4'
+                                            });
+                                        </script>
+
+                                    </div>
+                                </div>
+
+                                <!--
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="city">City</label>
+                                        <input id="city" type="text" placeholder="Ahmedabad" class="form-control" required>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="textarea">Your Address </label>
+                                        <textarea class="form-control" id="textarea" name="address" rows="4" placeholder="Write Your Address"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                                    <button type="submit" name="singlebutton" class="btn btn-primary" style="margin-top: 2%; margin-bottom: 2%; ">SEND</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Booking-->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+
+            <div class="social-links">
+                <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; Copyright <strong><span>Ashatavinayak</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> >
+    <!-- Vendor JS Files -->
+    {% static 'website/' %}
+    <script src="{% static 'website/assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'website/assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'website/assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'website/assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'website/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'website/assets/vendor/venobox/venobox.min.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'website/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <script>
+        if ('speechSynthesis' in window) {
+            alert("Browser Support;");
+            var msg = new SpeechSynthesisUtterance();
+            msg.text = "Hello World";
+            window.speechSynthesis.speak(msg);
+        } else {
+            alert("Sorry");
+        }
+    </script>
+</body>
+
+</html>
